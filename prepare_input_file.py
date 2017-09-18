@@ -126,7 +126,7 @@ if __name__ == '__main__':
     os.chdir("C:\\Users\\tiwarir\\Documents\\behavior_learning\\python_code")
     import data_parsing_version_1 as dp
     survey_data = pd.read_excel('Behavior change for weekend SCC (Dec.5-6).xlsx', sheetname = 'SCC 5-6 Dec', skiprows = 0)
-    mode = 'MRT'   #options 'Bus', 'MRT'
+    mode = 'BUS'   #options 'BUS', 'MRT'
     congestion_level = 2   #options 1, 2
     start_col_name =  dp.determine_starting_col_name(mode, congestion_level)
     col_locations = dp.determine_col_locations(survey_data, start_col_name)
@@ -134,7 +134,10 @@ if __name__ == '__main__':
     user_info = dp.parse_user_info(survey_data)
     incentive_value = dp.determine_incentive_values(congestion_level)
     choice_data = dp.create_user_choice_df(user_response, user_info, mode, congestion_level)
+    filename = mode.lower() + '_congestion_level_' + str(congestion_level) + '.csv'
     df = create_choice_df(choice_data)
+    df.to_csv(filename)
+    
     
     
     
