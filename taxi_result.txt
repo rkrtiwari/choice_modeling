@@ -1,0 +1,50 @@
+_________________________________________________________________________________________________________
+Result for Male
+_________________________________________________________________________________________________________
+Call:
+mlogit(formula = decision ~ DT + WT + incentive | 0, data = Tr_1, 
+    method = "nr", print.level = 0)
+
+Frequencies of alternatives:
+  leave    stay 
+0.42105 0.57895 
+
+nr method
+16 iterations, 0h:0m:0s 
+g'(-H)^-1g = 9.46E-07 
+gradient close to zero 
+
+Coefficients :
+            Estimate Std. Error t-value Pr(>|t|)   
+DT         -0.057901   0.023454 -2.4687 0.013560 * 
+WT         -0.144983   0.056078 -2.5854 0.009727 **
+incentive   3.522377 339.028519  0.0104 0.991710   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Log-Likelihood: -17.573
+_________________________________________________________________________________________________________
+Result for female
+_________________________________________________________________________________________________________
+Call:
+mlogit(formula = decision ~ DT + WT + incentive | 0, data = Tr_2, 
+    method = "nr", print.level = 0)
+
+Frequencies of alternatives:
+  leave    stay 
+0.55435 0.44565 
+
+nr method
+18 iterations, 0h:0m:0s 
+g'(-H)^-1g = 6.01E-07 
+gradient close to zero 
+
+Coefficients :
+            Estimate Std. Error t-value  Pr(>|t|)    
+DT         -0.075085   0.020863 -3.5990 0.0003195 ***
+WT         -0.146833   0.045554 -3.2233 0.0012674 ** 
+incentive   3.890883 425.177551  0.0092 0.9926985    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Log-Likelihood: -37.729
